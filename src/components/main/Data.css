@@ -1,0 +1,33 @@
+.filter_div{
+    background-color: yellowgreen;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-weight: bolder;
+    
+}
+
+.item_data{
+    background-image: url(../../assets/images/house10.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.mapped_item{
+    background-color: rgb(0,21,41);
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2%;
+    padding: 2% 5%;
+}
+
+.heart{
+    cursor: pointer;
+}

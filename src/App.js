@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Routes, Route } from "react-router-dom";
+import { Layout } from 'antd';
+
+import  Data from "./components/main/Data"
+import Favt from './components/favourites/Favt'
+import Header1 from './components/header/Header1';
+
+const { Header, Footer, Content } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+     <Layout>
+      <Header> <Header1 /></Header>
+      <Content>
+        <Routes>
+        <Route path="/" element={<Data />} />
+        <Route path="/favt" element={<Favt />} />
+      </Routes>
+      </Content>
+      <Footer>@Kiran</Footer>
+    </Layout>
+    
+     </>
+   
+  )
 }
 
-export default App;
+export default App
